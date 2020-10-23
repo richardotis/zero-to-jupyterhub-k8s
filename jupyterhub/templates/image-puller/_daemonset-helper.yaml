@@ -20,7 +20,7 @@ metadata:
     */}}
     "helm.sh/hook": pre-install,pre-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
-    "helm.sh/hook-weight": "-8"
+    "helm.sh/hook-weight": "10"
   {{- end }}
 spec:
   selector:
