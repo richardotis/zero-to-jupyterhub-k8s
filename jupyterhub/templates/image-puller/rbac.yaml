@@ -16,7 +16,7 @@ metadata:
   annotations:
     "helm.sh/hook": pre-install,pre-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
-    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-weight": "-10"
 ---
 {{- /*
 ... will be used by this role...
@@ -31,7 +31,7 @@ metadata:
   annotations:
     "helm.sh/hook": pre-install,pre-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
-    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-weight": "-9"
 rules:
   - apiGroups: ["apps"]       # "" indicates the core API group
     resources: ["daemonsets"]
@@ -50,7 +50,7 @@ metadata:
   annotations:
     "helm.sh/hook": pre-install,pre-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
-    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-weight": "-9"
 subjects:
   - kind: ServiceAccount
     name: hook-image-awaiter
